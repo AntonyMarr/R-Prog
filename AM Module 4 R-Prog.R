@@ -1,0 +1,16 @@
+library(ggplot2)
+Freq <- c(0.6,0.3,0.4,0.4,0.2,0.6,0.3,0.4,0.9,0.2)
+BP <- c(103,87,32,42,59,109,78,205,135,176)
+#first assessment by a general doctor (bad=1, good =0)
+First <- c(1,1,1,1,0,0,0,0,NA,1)
+#second assessment and final decision by an external doctor and head of the emergency unit (low = 0, high =1) 
+Second <- c(0,0,1,1,0,0,1,1,1,1)
+FinalDecision <- c(0,1,0,1,0,1,0,1,1,1)
+local_hospital_df <- data.frame(Freq,BP,First,Second,FinalDecision)
+
+ggplot(local_hospital_df, aes(x = BP,y = Freq)) + geom_boxplot(fill = "lightgreen") + labs(x= "Blood Pressure", y = "Frequency")
+ggplot(local_hospital_df,aes(First)) + geom_histogram(binwidth = 0.5, color = "black", fill = "purple") + labs(title = "first assessment by a general doctor (good = 0,bad = 1)",x = "Rate", y = "Count")
+ggplot(local_hospital_df,aes(Second)) + geom_histogram(binwidth = 0.5, color = "black", fill = "steelblue") + labs(title = "second assessment (low = 0, high =1) ",x = "Rate", y = "Count")
+ggplot(local_hospital_df,aes(FinalDecision)) + geom_histogram(binwidth = 0.5, color = "black", fill = "red") + labs(title = "Final Decision (low = 0, high =1) ",x = "Rate", y = "Count")
+
+ggplot(local_hospital_df, aes(x = BP)) + geom_col(aes(y = Freq), color = "black", fill = "cornflowerblue") + labs(x = "BP", y = "Frequency") + coord_flip()
