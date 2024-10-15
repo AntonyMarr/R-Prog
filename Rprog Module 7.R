@@ -17,9 +17,7 @@ setClass("Mammal", slots = c(name = "character",
                              dietType = "character",
                              age = "numeric"))
 Momo <- new("Mammal",name = "Momo", species = "Grizzly", furColor = "Brown", dietType = "Omnivorous", age = 6)
-is(Momo)
-Momo@species    
-slot(Momo, "age")
+Momo
                            
                             
                             
