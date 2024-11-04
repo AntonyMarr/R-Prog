@@ -1,0 +1,11 @@
+#Project Description code
+Package: PianoR
+Type: Package
+Title: Music Through Code
+Version: 0.1.0
+Author: Anthony Marrero Jr
+Maintainer: Anthony Marrero Jr <Amsecond101@gmail.com>
+Description: This package contains a dataset of 10 songs and two functions to help learn them
+License: CC0
+Encoding: UTF-8
+LazyData: true
