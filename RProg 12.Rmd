@@ -1,0 +1,22 @@
+---
+title: "Music Through Code"
+author: "Anthony Marrero"
+date: "2024-11-18"
+output: html_document
+---
+In this R Markdown document I will describe the contents of the dataset and functions involved for my R Programming Final Project.
+In the chunk below there will be mock code for what it should look like when the final project is complete.
+the first two lines of code will download and setup the Rpackage.
+The next two will simply load the data set and provide a summary of it contents
+```{r}
+#install.package(MusicOde)
+#library(MusicOde)
+#data(JazzStndrd)
+#summary(JazzStndrd)
+```
+In this next line of code i will introduce the two functions.
+The first function will give the original key center and notes for the song. So in the first example the code that should display for the function would be: "Eb Major" and "Eb, F, G, Ab, Bb, C, D"
+The second function will give the working chords for the song itself.the code in the second line should display: "Ebmaj7, Edim7, Fm7, F#dim7, etc.."
+```{r}
+#Scale("It_Could_Happen_To_You")
+#Chords("It_Could_Happen_To_You")
