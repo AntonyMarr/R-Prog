@@ -1,0 +1,13 @@
+Package: TheRealBook
+Type: Package
+Title: Jazz Standards on R
+Version: 0.1.0
+Author: Anthony Marrero Jr
+Maintainer: Anthony Marrero Jr <Amsecond101@gmail.com>
+Description: This is a simple package that contains a dataset of 10 songs and four functions that reveal the key center, chords, structure and structure list. This package REQUIRES the "music" package.
+License: CC0
+Encoding: UTF-8
+LazyData: true
+Imports: 
+    music
+RoxygenNote: 7.3.2
